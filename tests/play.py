@@ -13,11 +13,11 @@ def get_random_char():
     return random.choice(string.ascii_letters)
 
 
-for i in range(1000):
+for i in range(10):
     print("loop {}".format(str(i)))
     data_1 = []
     data_2 = []
-    for j in range(1000):
+    for j in range(10):
         data_1.append(Table1(column1=get_random_char(), column2=get_random_char(), column3=get_random_char()))
         data_2.append(Table2(column1=get_random_char(), column2=get_random_char(), column3=get_random_char()))
     session.add_all(data_1)

@@ -1,0 +1,46 @@
+# https://hub.docker.com/_/postgres
+# https://qiita.com/ymasaoka/items/ca2bb2cb19ebeafe1ccc
+# https://qiita.com/thalkanata/items/bae794498a087fe66ad4
+
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:latest
+    restart: always
+    ports:
+    - 15432:5432
+    environment:
+      POSTGRES_PASSWORD: password #required
+      POSTGRES_USER: user #optional
+      POSTGRES_DB: postgres #optional
+      # POSTGRES_INITDB_ARGS: "--data-checksums" #optional
+      # POSTGRES_INITDB_WALDIR: "" #optional (PostgreSQL 10+ or above)
+      # POSTGRES_INITDB_XLOGDIR: "" #optional (PostgreSQL 9.x only)
+      # POSTGRES_HOST_AUTH_METHOD: trust #optional
+      # PGDATA: /var/lib/postgresql/data/pgdata #optional
+
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   environment:
+  #     POSTGRES_PASSWORD: password #required
+  #     POSTGRES_USER: user #optional
+  #     POSTGRES_DB: postgres #optional
+  #   ports:
+  #     - 15432:5432
+  #     # - 8088:8080
+
+
+
+
+
+
+
+
+
+
+
+

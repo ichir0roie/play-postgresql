@@ -1,0 +1,15 @@
+{
+    "sqltools.connections": [
+        {
+          "name": "play_postgresql",
+          "server": "localhost",
+          "driver": "PostgreSQL",
+          "port": 15432,
+          "database": "postgres",
+          "username": "user",
+          "askForPassword": false,
+          "password": "password",
+          "connectionTimeout": 15
+        }
+      ],
+}
